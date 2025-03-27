@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 100vh;
+    /* Full viewport height */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    /* Full width */
+    max-width: 600px;
+    /* Maximum width for larger screens */
+}
+
+.box {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    max-height: 60px;
+    /* Initial height */
+}
+
+.box h2 {
+    margin: 0 0 10px;
+}
+
+.options {
+    display: none;
+    /* Initially hidden */
+    margin-top: 10px;
+}
+
+.box.expanded {
+    max-height: 300px;
+    /* Expanded height */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.color-option,
+.size-option {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.color-option:hover,
+.size-option:hover {
+    opacity: 0.8;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .box {
+        width: 100%;
+        /* Take full width on smaller screens */
+    }
+}
